@@ -33,7 +33,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-3">
                     <img src={logo} alt="Физико-технический факультет" className="h-10 w-auto" />
-                    <span className="text-gray-900 text-xl font-semibold whitespace-nowrap leading-snug">
+                    <span className="text-gray-900 text-xl max-sm:text-sm font-semibold whitespace-nowrap leading-snug">
                         Физико-технический факультет
                     </span>
                 </Link>
