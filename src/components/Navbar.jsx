@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const menuItems = [
-    { name: "АБИТУРИЕНТУ", path: "/abituryentu" },
-    { name: "ОБРАЗОВАНИЕ", path: "/obrazovanie" },
-    { name: "НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ", path: "/nauchnaya-deyatelnost" },
-    { name: "ВНЕУЧЕБНАЯ РАБОТА", path: "/vneuchebnaya-rabota" },
-    { name: "НОРМАТИВНО-ПРАВОВАЯ БАЗА", path: "/normativnaya-baza" },
+    { name: "Поступить", path: "/abituryentu" },
+    { name: "Обучение", path: "/obrazovanie" },
+    { name: "Наука", path: "/nauchnaya-deyatelnost" },
+    { name: "Новости", path: "/vneuchebnaya-rabota" },
+    { name: "Документы", path: "/normativnaya-baza" },
 ];
 
 const fakultetSubItems = [
@@ -43,7 +43,7 @@ export default function Navbar() {
                     {/* Dropdown: О ФАКУЛЬТЕТЕ */}
                     <li className="relative group">
                         <span className="cursor-pointer text-gray-700 hover:bg-blue-100 px-3 py-2 rounded transition whitespace-nowrap">
-                            О ФАКУЛЬТЕТЕ
+                            О факультети
                         </span>
                         <ul className="absolute left-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded shadow-md opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-20">
                             {fakultetSubItems.map(({ name, path }) => (
