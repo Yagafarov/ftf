@@ -1,13 +1,14 @@
-import { Button, Flex ,Text} from '@radix-ui/themes'
-import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <div>
-      <Flex direction="column" gap="2">
-			<Text>Hello from Radix Themes :)</Text>
-			<Button>Let's go</Button>
-		</Flex>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   )
 }
