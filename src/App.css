@@ -1,0 +1,19 @@
+@keyframes colorCycle {
+    0%, 100% { color: #3b82f6; }    /* primary */
+    25%      { color: #14b8a6; }    /* teal */
+    50%      { color: #f43f5e; }    /* red */
+    75%      { color: #eab308; }    /* yellow */
+  }
+  
+  .color-cycle {
+    animation: colorCycle 8s linear infinite;
+  }
+  
+  /* Har bir element uchun delay */
+  .delay-0 { animation-delay: 0s; }
+  .delay-2 { animation-delay: 2s; }
+  .delay-4 { animation-delay: 4s; }
+  .delay-6 { animation-delay: 6s; }
+  
+
+  

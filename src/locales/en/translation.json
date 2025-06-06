@@ -1,0 +1,238 @@
+{
+  "navbar": {
+    "title": [
+      "Samarkand",
+      "youth technopark"
+    ],
+    "home": "Home",
+    "activity": "Activity",
+    "about": "About Us",
+    "news": "News",
+    "residents": "Residents",
+    "contact": "Contact"
+  },
+  "footer": {
+    "develop": "We invite you to step into the world of innovation with us!",
+    "sections": "Sections",
+    "location": "University Avenue, Building 15"
+  },
+  "home": {
+    "mtitle": "Homepage - Samarkand Youth Technopark",
+    "title1": "Samarkand",
+    "title": "Welcome to the Youth Technopark!",
+    "subtitle": "Innovative ideas, cutting-edge startups, and the achievements of young scientists converge at the Samarkand Innovation Technopark, ushering in a new era.",
+    "about": "Established under the decrees of the President of the Republic of Uzbekistan and resolutions of the Cabinet of Ministers to support youth innovation projects. The Technopark serves as a modern center implementing regional, scientific, technological, and innovative projects in practice.",
+    "ourtask": [
+      "Our Task",
+      "Assisting in the implementation of youth innovation initiatives"
+    ],
+    "ourgoal": [
+      "Our Goal",
+      "Supporting technological projects of Samarkand region youth"
+    ],
+    "reason": {
+      "title": "Reasons to Work with Technopark",
+      "subtitle": "Enhancing youth potential through modern technologies and a professional approach",
+      "cards": [
+        {
+          "title": "Expert Knowledge",
+          "content": "Individual training and project coordination by mentors with international experience"
+        },
+        {
+          "title": "Technological Equipment",
+          "content": "Modern workspaces equipped with 3D printers, VR devices, and artificial intelligence laboratories"
+        },
+        {
+          "title": "Collaboration Network",
+          "content": "Project implementation in partnership with startups, corporations, and international organizations"
+        },
+        {
+          "title": "Financial Support",
+          "content": "Project funding through government grants, international sponsors, and investment opportunities"
+        }
+      ],
+      "statusRank": [
+        "Graduate",
+        "Project",
+        "Partner",
+        "Direction"
+      ]
+    }
+  },
+  "activity": {
+    "mtitle": "Activity - Samarkand Youth Technopark",
+    "subtitle": "Detailed information about our activities",
+    "project_title": "Startup Projects",
+    "project_desc": "IT projects for youth based on innovative ideas",
+    "event_title": "Events",
+    "event_desc": "Latest events in the technology field",
+    "education_title": "Educational Programs",
+    "education_desc": "Professional training in modern professions",
+    "gallery_title": "Activity Gallery",
+    "status":[
+      "Startup",
+      "Event",
+      "Education"
+    ]
+
+  },
+  "about": {
+    "mtitle": "About Us - Samarkand Youth Technopark",
+    "subtitle": "Samarkand Youth Technopark is a center of innovative opportunities, modern knowledge, and advanced technologies for youth. Our technopark provides all conditions for startups, IT projects, education, and collaboration.",
+    "about_title": "About Samarkand Youth Technopark",
+    "about_text": "The technopark was established to develop innovative ideas and startups of youth, creating the best environment for acquiring modern IT infrastructure and knowledge. We have modern laboratories, mentoring programs, grants, and investment opportunities.",
+    "goals_title": "Our Main Goals",
+    "goal_1": "Supporting youth’s innovative and technological projects",
+    "goal_2": "Enhancing modern knowledge and skills",
+    "goal_3": "Creating opportunities for collaboration and experience sharing",
+    "directions_title": "Main Directions",
+    "direction_1": "IT and Digital Technologies",
+    "direction_2": "Education and Professional Development",
+    "direction_3": "Startups and Business Incubation",
+    "advantages_title": "Our Advantages",
+    "advantage_1": "Modern infrastructure and offices",
+    "advantage_1_desc": "The technopark features modern laboratories, spacious and comfortable offices, high-speed internet, and all necessary infrastructure.",
+    "advantage_2_desc": "Each resident and project is supported by experienced mentors, industry experts, and a continuous advisory system.",
+    "advantage_3_desc": "The technopark supports project development through extensive collaboration networks and grant programs.",
+    "advantage_2": "Professional mentors and expert team",
+    "advantage_3": "Extensive collaboration and grant programs",
+    "leadership": {
+      "title": "Leadership",
+      "director": {
+        "name": "Islom Karimov",
+        "position": "Technopark Director",
+        "description": "Has 5 years of experience in technology and innovation. Participated in the development of Uzbekistan's top startups."
+      },
+      "manager_01": {
+        "name": "Dilnoza Rustamova",
+        "position": "Deputy Director for Educational Affairs",
+        "description": "8 years of experience in education, author of innovative methodologies."
+      },
+      "manager_02": {
+        "name": "Jamshid Islomov",
+        "position": "Deputy Director for Technologies",
+        "description": "Expert in IT infrastructure and digital ecosystem implementation."
+      }
+    },
+    "teachers": {
+      "title": "Teachers",
+      "teacher_1": {
+        "name": "Ubaydullo Abduhofizov",
+        "position": "Interior designer and 3D modeling",
+        "description": "5 years of experience in 3D modeling and design."
+      },
+      "teacher_2": {
+        "name": "Dilshodbek Rakhmonov",
+        "position": "Backend and Cloud Technologies",
+        "description": "5 years of experience with Node.js, Python, and AWS."
+      },
+      "teacher_3": {
+        "name": "Malika Ergasheva",
+        "position": "Startups and Business Fundamentals",
+        "description": "Expert in business planning and grant acquisition for startups."
+      }
+    },
+    "faq_title": "Frequently Asked Questions",
+    "faq_1_q": "How can I join the technopark?",
+    "faq_1_a": "You can become a resident by submitting an application and passing the selection process.",
+    "faq_2_q": "What opportunities are available for youth?",
+    "faq_2_a": "Mentoring, grants, master classes, and modern offices.",
+    "faq_3_q": "What kind of projects are implemented at the technopark?",
+    "faq_3_a": "Innovative IT, education, and startup projects."
+  },
+  "news": {
+  "mtitle": "News – Samarkand Youth Technopark",
+  "subtitle": "Stay up to date with the latest news and announcements",
+  "search_placeholder": "Search...",
+  "filter": "Filter",
+  "read_more": "Read more",
+  "no_results": "No news found",
+  "try_another": "Try different keywords or filters",
+  "category_all": "All",
+  "category_startap": "Startup",
+  "category_tadbir": "Event",
+  "category_talim": "Education",
+  "save": "Save",
+  "share": "Share",
+  "close": "Close",
+  "modal_category": "Category",
+  "modal_date": "Date",
+  "modal_saved": "News saved!",
+  "modal_shared": "News shared!"
+},
+  "residents": {
+    "mtitle": "Residents - Samarkand Youth Technopark",
+    "subtitle": "Meet our team. Each of us is an expert in our field and ready to provide you with the best service!",
+    "who_title": "Who can become a resident",
+    "who_1": "Startups with innovative projects",
+    "who_2": "Developers of new technologies in the IT sector",
+    "who_3": "Projects contributing to the digital economy",
+    "benefits_title": "Benefits",
+    "benefits_1": "Tax incentives",
+    "benefits_2": "Access to infrastructure",
+    "benefits_3": "Opportunities for international cooperation",
+    "requirements_title": "Requirements",
+    "requirements_1": "Innovative project concept",
+    "requirements_2": "Presentation of a business plan",
+    "requirements_3": "Weekly reports",
+    "how_title": "How to become a resident?",
+    "how_1": "Fill out the application",
+    "how_2": "Present your project",
+    "how_3": "Review by the expert commission",
+    "how_4": "Sign the contract",
+    "apply_btn": "Apply",
+    "faq_title": "Frequently Asked Questions",
+    "faq_1_q": "How long does it last?",
+    "faq_1_a": "The standard contract duration is 2 years",
+    "faq_2_q": "Are international projects accepted?",
+    "faq_2_a": "Yes, projects with foreign partners are accepted",
+    "faq_3_q": "Is funding available?",
+    "faq_3_a": "Grants are available for selected projects",
+    "current_residents_title": "Current residents and their achievements",
+    "yutuq": "Achievements",
+    "currentResidents": [
+      {
+        "description": "A leading company in mobile and web application development.",
+        "achievements": [
+          "Innovative Application Award 2024",
+          "Reached 50,000+ users"
+        ]
+      },
+      {
+        "description": "Ecological monitoring and analysis services powered by AI.",
+        "achievements": [
+          "Best Startup of the Year 2023",
+          "International grant recipient"
+        ]
+      },
+      {
+        "description": "Online education platform and interactive courses.",
+        "achievements": [
+          "Serving 10,000+ students",
+          "Educational Innovation Award"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "mtitle": "Contact - Samarkand Youth Technopark",
+    "title": "Contact us for any project or collaboration. We will respond within 24 hours!",
+    "inputName": "Your name",
+    "inputEmail": "Your email address",
+    "inputMsg": "Your message..."
+  },
+  "auth": {
+  "errPass": "Incorrect password",
+  "errSys": "System error occurred",
+  "inputPass": "Enter password",
+  "inputPlaceholder": "Password",
+  "btns": ["Checking...", "Login"]
+},
+  "btns": {
+    "activitybtn": "Our Activities",
+    "contactbtn": "Contact Us",
+    "aboutmebtn": "About Us",
+    "joinbtn": "Join now",
+    "sendbtn": "Send Message"
+  }
+}
