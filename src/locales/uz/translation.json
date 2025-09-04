@@ -1,0 +1,237 @@
+{
+  "navbar": {
+    "title": [
+      "Fizika-Texnika",
+      "Fakulteti TSU"
+    ],
+    "home": "Bosh sahifa",
+    "activity": "Faoliyat",
+    "about": "Fakultet haqida",
+    "news": "Yangiliklar",
+    "residents": "O'qituvchilar",
+    "contact": "Aloqa"
+  },
+  "footer": {
+    "develop": "Tomsk davlat universitetining Fizika-Texnika fakultetiga xush kelibsiz!",
+    "sections": "Bo'limlar",
+    "location": "Lenin ko'chasi, 36, Tomsk, 634050"
+  },
+  "home": {
+    "mtitle": "Bosh sahifa - Tomsk davlat universiteti FTF",
+    "title1": "Tomsk",
+    "title": "Fizika-Texnika fakultetiga xush kelibsiz!",
+    "subtitle": "Ilg'or ilmiy tadqiqotlar, innovatsion texnologiyalar va yuqori malakali mutaxassislar Tomsk davlat universitetining Fizika-Texnika fakultetida birlashgan.",
+    "about": "TSU Fizika-Texnika fakulteti fizika, matematika va texnika fanlari sohasida mutaxassislar tayyorlashning yetakchi markazlaridan biridir. Fakultet faol ilmiy-tadqiqot faoliyatini olib boradi va iqtisodiyotning turli sohalari uchun yuqori malakali mutaxassislar tayyorlaydi.",
+    "ourtask": [
+      "Bizning missiyamiz",
+      "Fizika va texnika fanlari sohasida yuqori malakali mutaxassislar tayyorlash"
+    ],
+    "ourgoal": [
+      "Bizning maqsadimiz",
+      "Ilmiy-tadqiqot faoliyatini va innovatsion texnologiyalarni rivojlantirish"
+    ],
+    "reason": {
+      "title": "FTF da o'qishning afzalliklari",
+      "subtitle": "Zamonaviy ta'lim, ilg'or tadqiqotlar va istiqbolli martaba imkoniyatlari",
+      "cards": [
+        {
+          "title": "Yuqori malakali o'qituvchilar",
+          "content": "Xalqaro tajribaga ega va ilmiy yutuqlari bo'lgan professorlar va dotsentlar"
+        },
+        {
+          "title": "Zamonaviy laboratoriyalar",
+          "content": "Ilmiy tadqiqotlar va amaliy mashg'ulotlar o'tkazish uchun jihozlangan laboratoriyalar"
+        },
+        {
+          "title": "Ilmiy tadqiqotlar",
+          "content": "Xalqaro loyihalarda ishtirok etish va ilmiy faoliyat bilan shug'ullanish imkoniyati"
+        },
+        {
+          "title": "Martaba imkoniyatlari",
+          "content": "Bitiruvchilar yetakchi kompaniyalar, ilmiy markazlar va universitetlarda ishlaydi"
+        }
+      ],
+      "statusRank": [
+        "Bitiruvchi",
+        "Talaba",
+        "O'qituvchi",
+        "Yo'nalish"
+      ]
+    }
+  },
+  "activity": {
+    "mtitle": "Faoliyat - Tomsk davlat universiteti FTF",
+    "subtitle": "Fakultet faoliyati haqida batafsil ma'lumot",
+    "project_title": "Ilmiy loyihalar",
+    "project_desc": "Fizika va texnika fanlari sohasidagi tadqiqot loyihalari",
+    "event_title": "Tadbirlar",
+    "event_desc": "Konferensiyalar, seminarlar va ilmiy tadbirlar",
+    "education_title": "Ta'lim dasturlari",
+    "education_desc": "Bakalavriat, magistratura va doktorantura",
+    "gallery_title": "Faoliyat galereyasi",
+    "status":[
+      "Tadqiqot",
+      "Tadbir",
+      "Ta'lim"
+    ]
+  },
+  "about": {
+    "mtitle": "Fakultet haqida - Tomsk davlat universiteti FTF",
+    "subtitle": "TSU Fizika-Texnika fakulteti fizika, matematika va texnika fanlari sohasida mutaxassislar tayyorlashning yetakchi markazidir. Fakultetda sifatli ta'lim, ilmiy tadqiqotlar va kasbiy rivojlanish uchun barcha shart-sharoitlar yaratilgan.",
+    "about_title": "TSU Fizika-Texnika fakulteti haqida",
+    "about_text": "Fakultet fizika va texnika fanlari sohasida yuqori malakali mutaxassislar tayyorlash maqsadida tashkil etilgan. Bizda zamonaviy laboratoriyalar, yuqori malakali o'qituvchilar, faol ilmiy-tadqiqot faoliyati va keng kasbiy rivojlanish imkoniyatlari mavjud.",
+    "goals_title": "Bizning asosiy maqsadlarimiz",
+    "goal_1": "Fizika va texnika fanlari sohasida yuqori malakali mutaxassislar tayyorlash",
+    "goal_2": "Ilmiy-tadqiqot faoliyatini va innovatsion texnologiyalarni rivojlantirish",
+    "goal_3": "Kasbiy rivojlanish va ilmiy martaba uchun shart-sharoitlar yaratish",
+    "directions_title": "Asosiy yo'nalishlar",
+    "direction_1": "Fizika va matematika",
+    "direction_2": "Texnika fanlari va muhandislik",
+    "direction_3": "Ilmiy tadqiqotlar va ishlanmalar",
+    "advantages_title": "Bizning afzalliklarimiz",
+    "advantage_1": "Zamonaviy laboratoriyalar va jihozlar",
+    "advantage_1_desc": "Fakultetda ilmiy tadqiqotlar va amaliy mashg'ulotlar o'tkazish uchun zamonaviy jihozlar bilan jihozlangan laboratoriyalar mavjud.",
+    "advantage_2_desc": "Xalqaro tajribaga ega va ilmiy yutuqlari bo'lgan yuqori malakali o'qituvchilar sifatli ta'limni ta'minlaydi.",
+    "advantage_3_desc": "Fakultet xalqaro loyihalarda faol ishtirok etadi va yetakchi universitetlar va ilmiy markazlar bilan hamkorlik qiladi.",
+    "advantage_2": "Yuqori malakali o'qituvchilar",
+    "advantage_3": "Xalqaro hamkorlik va ilmiy loyihalar",
+    "leadership": {
+      "title": "Fakultet rahbariyati",
+      "director": {
+        "name": "Professor Ivanov A.A.",
+        "position": "Fizika-Texnika fakulteti dekani",
+        "description": "Fizika-matematika fanlari doktori, professor. Fizika va ilmiy tadqiqotlar sohasida 20 yildan ortiq tajribaga ega."
+      },
+      "manager_01": {
+        "name": "Dotsent Petrova M.V.",
+        "position": "O'quv ishlari bo'yicha dekan o'rinbosari",
+        "description": "Fizika-matematika fanlari nomzodi, dotsent. Ta'lim texnologiyalari sohasida mutaxassis."
+      },
+      "manager_02": {
+        "name": "Dotsent Sidorov I.P.",
+        "position": "Ilmiy ishlar bo'yicha dekan o'rinbosari",
+        "description": "Texnika fanlari nomzodi, dotsent. Ilmiy-tadqiqot loyihalarining rahbari."
+      }
+    },
+    "teachers": {
+      "title": "O'qituvchilar",
+      "teacher_1": {
+        "name": "Professor Kozlov V.I.",
+        "position": "Umumiy fizika kafedrasi",
+        "description": "Fizika-matematika fanlari doktori, professor. Nazariy fizika sohasida mutaxassis."
+      },
+      "teacher_2": {
+        "name": "Dotsent Morozova E.A.",
+        "position": "Matematika kafedrasi",
+        "description": "Fizika-matematika fanlari nomzodi, dotsent. Amaliy matematika sohasida mutaxassis."
+      },
+      "teacher_3": {
+        "name": "Dotsent Volkov S.N.",
+        "position": "Texnika fanlari kafedrasi",
+        "description": "Texnika fanlari nomzodi, dotsent. Muhandislik texnologiyalari sohasida mutaxassis."
+      }
+    },
+    "faq_title": "Tez-tez so'raladigan savollar",
+    "faq_1_q": "Fakultetga qanday qabul bo'lish mumkin?",
+    "faq_1_a": "Qabul qilish uchun fizika, matematika va rus tili bo'yicha YEK imtihonlarini topshirish kerak.",
+    "faq_2_q": "Qanday yo'nalishlar mavjud?",
+    "faq_2_a": "Fizika, amaliy matematika, texnika fanlari va muhandislik.",
+    "faq_3_q": "Ilmiy faoliyat uchun qanday imkoniyatlar mavjud?",
+    "faq_3_a": "Ilmiy loyihalarda ishtirok etish, konferensiyalar va aspiranturada o'qish imkoniyati."
+  },
+  "news": {
+    "mtitle": "Yangiliklar - Tomsk davlat universiteti FTF",
+    "subtitle": "Fakultetning so'nggi yangiliklari va e'lonlarini kuzatib boring",
+    "search_placeholder": "Qidirish...",
+    "filter": "Filtr",
+    "read_more": "Batafsil",
+    "no_results": "Yangiliklar topilmadi",
+    "try_another": "Boshqa kalit so'zlar yoki filtrlarni sinab ko'ring",
+    "category_all": "Barchasi",
+    "category_startap": "Tadqiqot",
+    "category_tadbir": "Tadbir",
+    "category_talim": "Ta'lim",
+    "save": "Saqlash",
+    "share": "Ulashish",
+    "close": "Yopish",
+    "modal_category": "Kategoriya",
+    "modal_date": "Sana",
+    "modal_saved": "Yangilik saqlandi!",
+    "modal_shared": "Yangilik yuborildi!"
+  },
+  "residents": {
+    "mtitle": "O'qituvchilar - Tomsk davlat universiteti FTF",
+    "subtitle": "Bizning o'qituvchilarimiz bilan tanishing. Ularning har biri o'z sohasida yuqori malakali mutaxassisdir!",
+    "who_title": "Tayyorlash yo'nalishlari",
+    "who_1": "Fizika (bakalavriat va magistratura)",
+    "who_2": "Amaliy matematika va informatika",
+    "who_3": "Texnika fanlari va muhandislik",
+    "benefits_title": "O'qishning afzalliklari",
+    "benefits_1": "Yuqori sifatli ta'lim",
+    "benefits_2": "Zamonaviy laboratoriyalar va jihozlar",
+    "benefits_3": "Ilmiy faoliyat uchun imkoniyatlar",
+    "requirements_title": "Qabul qilish talablari",
+    "requirements_1": "Fizika, matematika va rus tili bo'yicha YEK",
+    "requirements_2": "Ta'lim hujjatlari",
+    "requirements_3": "Tibbiy ma'lumotnoma",
+    "how_title": "Fakultetga qanday qabul bo'lish mumkin?",
+    "how_1": "Qabul komissiyasiga hujjatlarni topshirish",
+    "how_2": "Kirish imtihonlarini topshirish",
+    "how_3": "Tanlov o'tkazish",
+    "how_4": "O'qish shartnomasini imzolash",
+    "apply_btn": "Hujjatlarni topshirish",
+    "faq_title": "Tez-tez so'raladigan savollar",
+    "faq_1_q": "O'qish muddati qancha?",
+    "faq_1_a": "Bakalavriat - 4 yil, magistratura - 2 yil, aspirantura - 3-4 yil",
+    "faq_2_q": "Davlat grant joylari bormi?",
+    "faq_2_a": "Ha, barcha yo'nalishlarda davlat grant joylari mavjud",
+    "faq_3_q": "Ishlash imkoniyatlari qanday?",
+    "faq_3_a": "Bitiruvchilar ilmiy markazlar, IT kompaniyalar va sanoatda ishlaydi",
+    "current_residents_title": "Bizning bitiruvchilarimiz va ularning yutuqlari",
+    "yutuq": "Yutuqlar",
+    "currentResidents": [
+      {
+        "description": "Fakultet bitiruvchisi, fizika sohasida yetakchi ilmiy xodim.",
+        "achievements": [
+          "Fizika-matematika fanlari doktori",
+          "50 dan ortiq ilmiy nashr muallifi"
+        ]
+      },
+      {
+        "description": "Fakultet bitiruvchisi, yirik kompaniyaning IT bo'limi rahbari.",
+        "achievements": [
+          "Texnika fanlari nomzodi",
+          "Mashina o'rganishi sohasida ekspert"
+        ]
+      },
+      {
+        "description": "Fakultet bitiruvchisi, yetakchi universitetda o'qituvchi.",
+        "achievements": [
+          "Fizika kafedrasi dotsenti",
+          "Ilmiy loyihalar rahbari"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "mtitle": "Aloqa - Tomsk davlat universiteti FTF",
+    "title": "Qabul yoki hamkorlik masalalarida biz bilan bog'laning. 24 soat ichida javob beramiz!",
+    "inputName": "Ismingiz",
+    "inputEmail": "Elektron pochta manzilingiz",
+    "inputMsg": "Xabaringiz..."
+  },
+  "auth": {
+    "errPass": "Noto'g'ri parol",
+    "errSys": "Tizim xatosi yuz berdi",
+    "inputPass": "Parolni kiriting",
+    "inputPlaceholder": "Parol",
+    "btns": ["Tekshirilmoqda...", "Kirish"]
+  },
+  "btns": {
+    "activitybtn": "Bizning faoliyatimiz",
+    "contactbtn": "Aloqa",
+    "aboutmebtn": "Biz haqimizda",
+    "joinbtn": "Qo'shilish",
+    "sendbtn": "Xabar yuborish"
+  }
+}

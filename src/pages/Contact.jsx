@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useTitle from "../components/useTitle";
 import { useTranslation } from "react-i18next";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaPaperPlane } from "react-icons/fa";
 
 // Telegram token va chat id ni shu yerda yozing
 const TELEGRAM_BOT_TOKEN = '7305258248:AAGoJgcC_38pnMcmgIj9BiNtk_AnyJ3t6ZA';
@@ -53,7 +54,7 @@ const Contact = () => {
       await sendMessageToTelegram(telegramMessage);
       setAlert({ show: true, type: "success", message: "Xabaringiz muvaffaqiyatli yuborildi!" });
       form.reset();
-    } catch (error) {
+    } catch {
       setAlert({ show: true, type: "error", message: "Xabar yuborishda xatolik yuz berdi." });
     }
 
@@ -63,73 +64,166 @@ const Contact = () => {
     }, 3500);
   };
 
+  const contactInfo = [
+    {
+      icon: <FaMapMarkerAlt className="text-2xl" />,
+      title: "Manzil",
+      details: "pr. Lenina, 36, Tomsk, 634050",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: <FaPhoneAlt className="text-2xl" />,
+      title: "Telefon",
+      details: "+7 (3822) 52-91-85",
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      icon: <FaEnvelope className="text-2xl" />,
+      title: "Email",
+      details: "ftf@tsu.ru",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: <FaClock className="text-2xl" />,
+      title: "Ish vaqti",
+      details: "Dushanba - Juma: 8:00 - 17:00",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
   return (
-    <div className="py-16 pt-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* DaisyUI Alert */}
+    <div className="min-h-screen bg-gradient-to-br from-base-100 to-base-200 py-20">
+      <div className="container mx-auto px-4">
+        {/* Alert */}
         {alert.show && (
-          <div className={`alert alert-${alert.type} shadow-lg mb-6 transition-all duration-300`}>
+          <div className={`alert alert-${alert.type} shadow-lg mb-8 max-w-2xl mx-auto transition-all duration-300`}>
             <span>{alert.message}</span>
           </div>
         )}
 
-        {/* Sarlavha */}
-        <div className="text-center md:mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-info mb-4">
-            {t('btns.contactbtn')}
-          </h2>
-          <p className="max-w-md mx-auto">
-            {t('contact.title') || "Har qanday loyiha yoki hamkorlik uchun bog'laning. Sizga 24 soat ichida javob beramiz!"}
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-info to-sky-600 bg-clip-text text-transparent">
+              {t('btns.contactbtn')}
+            </span>
+          </h1>
+          <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
+            {t('contact.title')}
           </p>
         </div>
 
-        {/* Form va Xarita */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 rounded-xl shadow-sm overflow-hidden">
-          {/* Form Qismi */}
-          <div className="lg:w-1/2 w-full p-8">
-            <h3 className="text-xl font-semibold mb-6 ">{t('btns.sendbtn')}</h3>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div className="form-control">
-                <input 
-                  type="text" 
-                  name="name"
-                  placeholder={t('contact.inputName')}
-                  className="input input-bordered  w-full"
-                  required
-                />
+        <div className="grid lg:grid-cols-3 gap-12">
+          {/* Contact Information */}
+          <div className="lg:col-span-1 space-y-6">
+            <h2 className="text-2xl font-bold mb-8 text-center lg:text-left">
+              <span className="bg-gradient-to-r from-info to-sky-600 bg-clip-text text-transparent">
+                Aloqa ma'lumotlari
+              </span>
+            </h2>
+            
+            {contactInfo.map((info, index) => (
+              <div key={index} className="group">
+                <div className="flex items-start space-x-4 p-6 bg-base-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-r ${info.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                    {info.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold mb-1 text-base-content">
+                      {info.title}
+                    </h3>
+                    <p className="text-base-content/70">
+                      {info.details}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="form-control">
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder={t('contact.inputEmail')}
-                  className="input input-bordered w-full"
-                  required
-                />
-              </div>
-              <div className="form-control">
-                <textarea 
-                  name="message"
-                  className="textarea textarea-bordered h-32 w-full"
-                  placeholder={t('contact.inputMsg')}
-                  required
-                ></textarea>
-              </div>
-              <button className="btn btn-info text-white btn-block mt-4  transition-colors" type="submit">
-                {t('btns.sendbtn')}
-              </button>
-            </form>
+            ))}
           </div>
 
-          {/* Xarita Qismi */}
-          <div className="lg:w-3/4 w-full relative min-h-[400px] ">
-            <iframe
-              className="w-full h-full absolute inset-0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.239352184306!2d66.9573762899339!3d39.64432752900472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d19ca891429b5%3A0xd67bdbef8e48a3a2!2sSamarkand%20Youth%20Technopark!5e0!3m2!1suz!2sru!4v1745907793284!5m2!1suz!2sru"
-              allowFullScreen
-              loading="lazy"
-              title="Google Map"
-            ></iframe>
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <div className="bg-base-100 rounded-2xl shadow-xl p-8">
+              <h2 className="text-2xl font-bold mb-8 text-center">
+                <span className="bg-gradient-to-r from-info to-sky-600 bg-clip-text text-transparent">
+                  {t('btns.sendbtn')}
+                </span>
+              </h2>
+              
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text font-medium">{t('contact.inputName')}</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      placeholder={t('contact.inputName')}
+                      className="input input-bordered w-full focus:input-info transition-colors"
+                      required
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text font-medium">{t('contact.inputEmail')}</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      placeholder={t('contact.inputEmail')}
+                      className="input input-bordered w-full focus:input-info transition-colors"
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text font-medium">{t('contact.inputMsg')}</span>
+                  </label>
+                  <textarea 
+                    name="message"
+                    className="textarea textarea-bordered h-32 w-full focus:textarea-info transition-colors resize-none"
+                    placeholder={t('contact.inputMsg')}
+                    required
+                  ></textarea>
+                </div>
+                
+                <button 
+                  className="btn btn-info btn-lg w-full shadow-lg hover:shadow-xl transition-all duration-300 group" 
+                  type="submit"
+                >
+                  <FaPaperPlane className="mr-2 group-hover:translate-x-1 transition-transform" />
+                  {t('btns.sendbtn')}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-16">
+          <div className="bg-base-100 rounded-2xl shadow-xl overflow-hidden">
+            <div className="p-8 text-center">
+              <h2 className="text-2xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-info to-sky-600 bg-clip-text text-transparent">
+                  Bizning manzilimiz
+                </span>
+              </h2>
+              <p className="text-base-content/70 mb-6">
+                Tomsk davlat universitetining Fizika-Texnika fakulteti
+              </p>
+            </div>
+            <div className="relative h-96">
+              <iframe
+                className="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2201.2345678901234!2d84.9876543210987!3d56.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x432b1234567890ab%3A0x1234567890abcdef!2sTomsk%20State%20University!5e0!3m2!1sen!2sru!4v1234567890123!5m2!1sen!2sru"
+                allowFullScreen
+                loading="lazy"
+                title="TSU Location Map"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

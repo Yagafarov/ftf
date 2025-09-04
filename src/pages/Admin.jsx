@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { FaEdit, FaTrash, FaPlus, FaSave, FaTimes, FaSignOutAlt } from "react-icons/fa";
 import { databases, storage, ID } from "../appwrite";
 import Auth from "./Auth";
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const DATABASE_ID = "681287e00036d14a63a3";
@@ -31,8 +30,6 @@ function getImageUrl(image) {
 }
 
 const Admin = () => {
-
-   const { t } = useTranslation();
   const [authenticated, setAuthenticated] = useState(
     localStorage.getItem("adminAuth") === "true"
   );
@@ -61,7 +58,7 @@ const Admin = () => {
     if (panelOpen && !form.date) {
       setForm((f) => ({ ...f, date: new Date().toISOString().slice(0, 10) }));
     }
-  }, [panelOpen]);
+  }, [panelOpen, form.date]);
 
   const uploadImage = async (file) => {
     const fileId = ID.unique();
@@ -146,10 +143,6 @@ const Admin = () => {
     return getImageUrl(form.image);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("adminAuth");
-    setAuthenticated(false);
-  };
 
   if (!authenticated) {
     return <Auth onAuthSuccess={() => setAuthenticated(true)}  />;

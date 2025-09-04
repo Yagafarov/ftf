@@ -27,115 +27,124 @@ const Footer = () => {
 
   return (
     <>
-    <footer className="footer sm:footer-horizontal lg:px-20 justify-between mx-auto text-base-content p-5 md:py-5 container">
-      <aside className="flex flex-col items-start mb-6">
-        <Link to="/" className="text-xl navbar-center">
-          <img className='object-cover w-auto h-9 mr-4' src={logo} alt="SAM" />
-          <div className='flex flex-col items-left font-semibold'>
-            <span className="text-lg">{t('navbar.title.0')}</span>
-            <span className="text-lg">{t('navbar.title.1')}</span>
-          </div>
-        </Link>
-        <p className='text-base'>
-          {new Date().getFullYear()} - {t('footer.develop')}
-        </p>
-        
-        {/* Ijtimoiy tarmoqlar */}
-        <div className="flex items-center space-x-4 mt-5">
-          <a href="https://www.facebook.com/samytpuz1" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-            <div className="bg-primary/10 p-2 rounded-xl">
-              <FaFacebook className="w-5 h-5 text-primary" />
+    <footer className="footer footer-vertical sm:footer-horizontal bg-base-200 text-base-content py-8 sm:py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+          {/* Logo and Description */}
+          <aside className="flex flex-col items-start space-y-4">
+            <Link to="/" className="flex items-center gap-3">
+              <img className='object-cover w-auto h-8 sm:h-9' src={logo} alt="TSU FTF" />
+              <div className='flex flex-col items-start font-semibold'>
+                <span className="text-sm sm:text-base lg:text-lg">{t('navbar.title.0')}</span>
+                <span className="text-xs sm:text-sm lg:text-base text-base-content/70">{t('navbar.title.1')}</span>
+              </div>
+            </Link>
+            <p className='text-sm sm:text-base text-base-content/80 leading-relaxed max-w-sm'>
+              {new Date().getFullYear()} - {t('footer.develop')}
+            </p>
+            
+            {/* Social Media */}
+            <div className="flex items-center space-x-3">
+              <a href="https://www.facebook.com/tsu.ru" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                <div className="bg-primary/10 p-2 rounded-xl hover:bg-primary/20 transition-colors">
+                  <FaFacebook className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                </div>
+              </a>
+              <a href="https://www.instagram.com/tsu_official" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                <div className="bg-secondary/10 p-2 rounded-xl hover:bg-secondary/20 transition-colors">
+                  <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-secondary" />
+                </div>
+              </a>
+              <a href="https://t.me/tsu_official" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                <div className="bg-accent/10 p-2 rounded-xl hover:bg-accent/20 transition-colors">
+                  <FaTelegram className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                </div>
+              </a>
+              <a href="https://www.youtube.com/tsu_official" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                <div className="bg-info/10 p-2 rounded-xl hover:bg-info/20 transition-colors">
+                  <FaYoutube className="w-4 h-4 sm:w-5 sm:h-5 text-info" />
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="https://www.instagram.com/samytp.uz" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
-            <div className="bg-secondary/10 p-2 rounded-xl">
-              <FaInstagram className="w-5 h-5 text-secondary" />
-            </div>
-          </a>
-          <a href="https://t.me/samytpuz" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
-            <div className="bg-accent/10 p-2 rounded-xl">
-              <FaTelegram className="w-5 h-5 text-accent" />
-            </div>
-          </a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="hover:text-info">
-            <div className="bg-info/10 p-2 rounded-xl">
-              <FaYoutube className="w-5 h-5 text-info" />
-            </div>
-          </a>
-        </div>
-      </aside>
+          </aside>
 
-      <nav className="mr-10">
-        <h6 className="footer-title text-lg font-semibold mb-2">
-          {t('footer.sections')}
-          </h6>
-        <ul className='text-base space-y-1'>
-          <li>
-            <Link to="/activity" onClick={handleClick} className="flex items-center hover:text-primary">
-              <div className="bg-primary/10 p-2 rounded-xl mr-2">
-                <FaChartLine className="w-4 h-4 text-primary" />
-              </div>
-              {t('navbar.activity')}
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={handleClick} className="flex items-center hover:text-secondary">
-              <div className="bg-secondary/10 p-2 rounded-xl mr-2">
-                <FaInfoCircle className="w-4 h-4 text-secondary" />
-              </div>
-              {t('navbar.about')}
-            </Link>
-          </li>
-          <li>
-            <Link to="/news" onClick={handleClick} className="flex items-center hover:text-accent">
-              <div className="bg-accent/10 p-2 rounded-xl mr-2">
-                <FaNewspaper className="w-4 h-4 text-accent" />
-              </div>
-              {t('navbar.news')}
-            </Link>
-          </li>
-          <li>
-            <Link to="/residents" onClick={handleClick} className="flex items-center hover:text-info">
-              <div className="bg-info/10 p-2 rounded-xl mr-2">
-                <FaUsers className="w-4 h-4 text-info" />
-              </div>
-              {t('navbar.residents')}
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={handleClick} className="flex items-center hover:text-success">
-              <div className="bg-success/10 p-2 rounded-xl mr-2">
-                <FaEnvelope className="w-4 h-4 text-success" />
-              </div>
-              {t('navbar.contact')}
-            </Link>
-          </li>
-        </ul>
-      </nav>
+          {/* Navigation Links */}
+          <nav className="space-y-4">
+            <h6 className="footer-title text-base sm:text-lg font-semibold mb-4">
+              {t('footer.sections')}
+            </h6>
+            <ul className='text-sm sm:text-base space-y-3'>
+              <li>
+                <Link to="/activity" onClick={handleClick} className="flex items-center hover:text-primary transition-colors group">
+                  <div className="bg-primary/10 p-2 rounded-xl mr-3 group-hover:bg-primary/20 transition-colors">
+                    <FaChartLine className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="font-medium">{t('navbar.activity')}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={handleClick} className="flex items-center hover:text-secondary transition-colors group">
+                  <div className="bg-secondary/10 p-2 rounded-xl mr-3 group-hover:bg-secondary/20 transition-colors">
+                    <FaInfoCircle className="w-4 h-4 text-secondary" />
+                  </div>
+                  <span className="font-medium">{t('navbar.about')}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" onClick={handleClick} className="flex items-center hover:text-accent transition-colors group">
+                  <div className="bg-accent/10 p-2 rounded-xl mr-3 group-hover:bg-accent/20 transition-colors">
+                    <FaNewspaper className="w-4 h-4 text-accent" />
+                  </div>
+                  <span className="font-medium">{t('navbar.news')}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/residents" onClick={handleClick} className="flex items-center hover:text-info transition-colors group">
+                  <div className="bg-info/10 p-2 rounded-xl mr-3 group-hover:bg-info/20 transition-colors">
+                    <FaUsers className="w-4 h-4 text-info" />
+                  </div>
+                  <span className="font-medium">{t('navbar.residents')}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={handleClick} className="flex items-center hover:text-success transition-colors group">
+                  <div className="bg-success/10 p-2 rounded-xl mr-3 group-hover:bg-success/20 transition-colors">
+                    <FaEnvelope className="w-4 h-4 text-success" />
+                  </div>
+                  <span className="font-medium">{t('navbar.contact')}</span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-      <nav className='text-base'>
-        <h6 className="footer-title text-lg font-semibold mb-2">{t('navbar.contact')}</h6>
-        <div className="flex items-center mb-2">
-          <div className="bg-primary/10 p-2 rounded-xl mr-2">
-            <FaMapMarkerAlt className="w-4 h-4 text-primary" />
-          </div>
-          <a className="link link-hover" target='_blank' href="https://yandex.uz/maps/org/178000615710/">
-          {t('footer.location')}
-          </a>
+          {/* Contact Information */}
+          <nav className="space-y-4">
+            <h6 className="footer-title text-base sm:text-lg font-semibold mb-4">{t('navbar.contact')}</h6>
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <div className="bg-primary/10 p-2 rounded-xl mr-3 flex-shrink-0">
+                  <FaMapMarkerAlt className="w-4 h-4 text-primary" />
+                </div>
+                <a className="link link-hover text-sm sm:text-base leading-relaxed" target='_blank' href="https://yandex.ru/maps/org/178000615710/">
+                  {t('footer.location')}
+                </a>
+              </div>
+              <div className="flex items-center">
+                <div className="bg-secondary/10 p-2 rounded-xl mr-3 flex-shrink-0">
+                  <FaPhoneAlt className="w-4 h-4 text-secondary" />
+                </div>
+                <a className="link link-hover text-sm sm:text-base" href="tel:+73822529185">+7 (3822) 52-91-85</a>
+              </div>
+              <div className="flex items-center">
+                <div className="bg-accent/10 p-2 rounded-xl mr-3 flex-shrink-0">
+                  <FaEnvelope className="w-4 h-4 text-accent" />
+                </div>
+                <a className="link link-hover text-sm sm:text-base" href="mailto:ftf@tsu.ru">ftf@tsu.ru</a>
+              </div>
+            </div>
+          </nav>
         </div>
-        <div className="flex items-center mb-2">
-          <div className="bg-secondary/10 p-2 rounded-xl mr-2">
-            <FaPhoneAlt className="w-4 h-4 text-secondary" />
-          </div>
-          <a className="link link-hover" href="tel:+998889345505">+998 (88) 934-55-05</a>
-        </div>
-        <div className="flex items-center">
-          <div className="bg-accent/10 p-2 rounded-xl mr-2">
-            <FaEnvelope className="w-4 h-4 text-accent" />
-          </div>
-          <a className="link link-hover" href="mailto:samarqadyoshlartexnoparki@gmail.com">samarqadyoshlartexnoparki@gmail.com</a>
-        </div>
-      </nav>
+      </div>
     </footer>
     {loading && (
                     <Loading />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // useEffect qo'shildi
+import React, { useState } from 'react';
 import useTitle from '../components/useTitle';
 import { useTranslation } from 'react-i18next';
 import { 

@@ -183,7 +183,7 @@ const Residents = () => {
           {t('residents.current_residents_title') || "Mavjud rezidentlar va ularning yutuqlari"}
         </h3>
         <div className="grid md:grid-cols-3 gap-8">
-          {currentResidents.map((res, idx) => (
+          {currentResidents.map((res) => (
             <div
               key={res.name}
               className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"

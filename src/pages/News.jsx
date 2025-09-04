@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useTitle from '../components/useTitle';
 import { useTranslation } from 'react-i18next';
-import { databases, storage, ID } from '../appwrite'; // Appwrite konfiguratsiyangiz
+import { databases, ID } from '../appwrite'; // Appwrite konfiguratsiyangiz
 import {
   FaSearch,
   FaCalendarAlt,
@@ -99,179 +99,202 @@ const News = () => {
   }, [filteredNews, currentPage, totalPages]);
 
   return (
-    <div className="container mx-auto px-4 py-10 mt-14">
-      {/* Sarlavha */}
-      <div className="text-center ld:mb-10">
-        <h1 className="text-2xl md:text-5xl font-bold mb-3">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-info to-primary">
-            {t('news.mtitle', "Yangiliklar")}
-          </span>
-        </h1>
-        <p className="text-base-content/70 max-w-xl mx-auto">
-          {t('news.subtitle', "So'nggi yangiliklar va e'lonlar bilan tanishing")}
-        </p>
-      </div>
-
-      {/* Qidiruv va filtrlar */}
-      <div className="flex flex-col md:flex-row gap-4 mb-8 sticky top-0 z-10 bg-base-100/80 py-4 backdrop-blur-sm rounded-md">
-        <div className="relative flex-grow">
-          <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-info" />
-          <input
-            type="text"
-            placeholder={t('news.search_placeholder', "Qidirish...")}
-            className="input input-bordered w-full pl-12 pr-4"
-            value={searchTerm}
-            onChange={(e) => {
-              setSearchTerm(e.target.value);
-              setCurrentPage(1);
-            }}
-          />
+    <div className="min-h-screen bg-gradient-to-br from-base-100 to-base-200 py-20">
+      <div className="container mx-auto px-4">
+        {/* Sarlavha */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-info to-sky-600 bg-clip-text text-transparent">
+              {t('news.mtitle', "Yangiliklar")}
+            </span>
+          </h1>
+          <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
+            {t('news.subtitle', "So'nggi yangiliklar va e'lonlar bilan tanishing")}
+          </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`badge badge-lg transition-all ${
-                categoryFilter === category
-                  ? 'badge-info text-white'
-                  : 'badge-ghost hover:badge-info/20'
-              }`}
-              onClick={() => {
-                setCategoryFilter(category);
-                setCurrentPage(1);
-              }}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div>
 
-      {/* Yuklash holati */}
-      {loading && (
-        <div className="text-center py-20">
-          <span className="loading loading-spinner loading-lg text-info"></span>
-        </div>
-      )}
-
-      {/* Yangiliklar grid */}
-      {!loading && currentNews.length > 0 ? (
-        <>
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
-            {currentNews.map((news) => (
-              <div
-                key={news.$id}
-                className="card card-compact bg-base-100 shadow-xl hover:shadow-2xl transition-shadow cursor-pointer"
-                onClick={() => openModal(news)}
-              >
-                <figure className="relative h-48 overflow-hidden rounded-t-lg">
-                  <img
-                    src={getImageUrl(news.image)}
-                    alt={news.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                  <span className="absolute top-4 left-4 badge badge-info">
-                    {news.category}
-                  </span>
-                </figure>
-                <div className="card-body">
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <FaCalendarAlt className="text-info" />
-                    <span>{news.date}</span>
-                  </div>
-                  <h2 className="card-title line-clamp-1">{news.title}</h2>
-                  <p className="text-base-content/70 line-clamp-2">{news.content}</p>
-                  <div className="card-actions justify-end mt-2">
-                    <button className="btn btn-sm btn-ghost text-info">
-                      {t('news.read_more', "Batafsil")} <FaExternalLinkAlt className="ml-1" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex justify-center mt-6">
-              <div className="join">
-                <button
-                  className="join-item btn btn-sm"
-                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
-                  disabled={currentPage === 1}
-                >
-                  <FaChevronLeft />
-                </button>
-                {Array.from({ length: totalPages }, (_, i) => (
-                  <button
-                    key={i}
-                    className={`join-item btn btn-sm ${currentPage === i + 1 ? 'btn-active' : ''}`}
-                    onClick={() => handlePageChange(i + 1)}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
-                <button
-                  className="join-item btn btn-sm"
-                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
-                  disabled={currentPage === totalPages}
-                >
-                  <FaChevronRight />
-                </button>
-              </div>
+        {/* Qidiruv va filtrlar */}
+        <div className="bg-base-100 rounded-2xl shadow-lg p-6 mb-12">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="relative flex-grow">
+              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-info" />
+              <input
+                type="text"
+                placeholder={t('news.search_placeholder', "Qidirish...")}
+                className="input input-bordered w-full pl-12 pr-4 focus:input-info transition-colors"
+                value={searchTerm}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  setCurrentPage(1);
+                }}
+              />
             </div>
-          )}
-        </>
-      ) : (
-        !loading && (
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  className={`badge badge-lg transition-all ${
+                    categoryFilter === category
+                      ? 'badge-info text-white shadow-lg'
+                      : 'badge-ghost hover:badge-info/20 hover:shadow-md'
+                  }`}
+                  onClick={() => {
+                    setCategoryFilter(category);
+                    setCurrentPage(1);
+                  }}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Yuklash holati */}
+        {loading && (
           <div className="text-center py-20">
-            <FaNewspaper className="mx-auto text-5xl text-gray-400 mb-4" />
-            <h3 className="text-xl font-medium">{t('news.no_results', "Hech qanday yangilik topilmadi")}</h3>
+            <span className="loading loading-spinner loading-lg text-info"></span>
           </div>
-        )
-      )}
+        )}
 
-      {/* Modal oynasi */}
-      {selectedNews && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative bg-base-100 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-            <button
-              className="absolute top-4 right-4 btn btn-circle btn-sm btn-ghost hover:bg-error/20 hover:text-error transition-all"
-              onClick={closeModal}
-              aria-label="Close modal"
-            >
-              <FaTimes className="text-xl" />
-            </button>
+        {/* Yangiliklar grid */}
+        {!loading && currentNews.length > 0 ? (
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {currentNews.map((news) => (
+                <div
+                  key={news.$id}
+                  className="group bg-base-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden card-hover"
+                  onClick={() => openModal(news)}
+                >
+                  <figure className="relative h-48 overflow-hidden">
+                    <img
+                      src={getImageUrl(news.image)}
+                      alt={news.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <span className="absolute top-4 left-4 badge badge-info shadow-lg">
+                      {news.category}
+                    </span>
+                  </figure>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-sm text-base-content/60 mb-3">
+                      <FaCalendarAlt className="text-info" />
+                      <span>{news.date}</span>
+                    </div>
+                    <h2 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-info transition-colors">
+                      {news.title}
+                    </h2>
+                    <p className="text-base-content/70 line-clamp-3 mb-4 leading-relaxed">
+                      {news.content}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <button className="btn btn-sm btn-info btn-outline group-hover:btn-info transition-colors">
+                        {t('news.read_more', "Batafsil")} 
+                        <FaExternalLinkAlt className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-            <div className="p-6 md:p-8">
-              <div className="relative h-64 md:h-80 mb-6 m-5 md:m-10 rounded-xl overflow-hidden group">
-                <img
-                  src={getImageUrl(selectedNews.image)}
-                  alt={selectedNews.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 flex gap-2">
-                  <span className="badge badge-info glass text-white">
-                    {selectedNews.category}
-                  </span>
-                  <span className="badge badge-ghost glass flex text-white items-center gap-1">
-                    <FaCalendarAlt className="text-info" /> {selectedNews.date}
-                  </span>
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center">
+                <div className="join bg-base-100 rounded-2xl shadow-lg p-2">
+                  <button
+                    className="join-item btn btn-sm btn-ghost hover:btn-info transition-colors"
+                    onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                    disabled={currentPage === 1}
+                  >
+                    <FaChevronLeft />
+                  </button>
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <button
+                      key={i}
+                      className={`join-item btn btn-sm transition-colors ${
+                        currentPage === i + 1 
+                          ? 'btn-info text-white shadow-lg' 
+                          : 'btn-ghost hover:btn-info/20'
+                      }`}
+                      onClick={() => handlePageChange(i + 1)}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                  <button
+                    className="join-item btn btn-sm btn-ghost hover:btn-info transition-colors"
+                    onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                    disabled={currentPage === totalPages}
+                  >
+                    <FaChevronRight />
+                  </button>
                 </div>
               </div>
+            )}
+          </>
+        ) : (
+          !loading && (
+            <div className="text-center py-20">
+              <div className="bg-base-100 rounded-2xl shadow-lg p-12 max-w-md mx-auto">
+                <FaNewspaper className="mx-auto text-6xl text-base-content/30 mb-6" />
+                <h3 className="text-2xl font-bold mb-2 text-base-content">
+                  {t('news.no_results', "Hech qanday yangilik topilmadi")}
+                </h3>
+                <p className="text-base-content/70">
+                  {t('news.try_another', "Boshqa kalit so'zlar yoki filtrlarni sinab ko'ring")}
+                </p>
+              </div>
+            </div>
+          )
+        )}
 
-              <h2 className="text-2xl md:text-2xl font-bold mb-4 text-gradient bg-gradient-to-r  bg-clip-text text-info">
-                {selectedNews.title}
-              </h2>
+        {/* Modal oynasi */}
+        {selectedNews && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+            <div className="relative bg-base-100 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+              <button
+                className="absolute top-4 right-4 btn btn-circle btn-sm btn-ghost hover:bg-error/20 hover:text-error transition-all z-10"
+                onClick={closeModal}
+                aria-label="Close modal"
+              >
+                <FaTimes className="text-xl" />
+              </button>
 
-              <p className="text-base text-justify whitespace-pre-line mb-6 leading-relaxed">
-                {selectedNews.content}
-              </p>
+              <div className="p-6 md:p-8">
+                <div className="relative h-64 md:h-80 mb-8 rounded-2xl overflow-hidden group">
+                  <img
+                    src={getImageUrl(selectedNews.image)}
+                    alt={selectedNews.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 flex gap-2">
+                    <span className="badge badge-info shadow-lg">
+                      {selectedNews.category}
+                    </span>
+                    <span className="badge badge-ghost glass flex text-white items-center gap-1">
+                      <FaCalendarAlt className="text-info" /> {selectedNews.date}
+                    </span>
+                  </div>
+                </div>
+
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-info to-sky-600 bg-clip-text text-transparent">
+                  {selectedNews.title}
+                </h2>
+
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-base-content/80 text-justify whitespace-pre-line leading-relaxed">
+                    {selectedNews.content}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

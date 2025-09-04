@@ -1,61 +1,61 @@
 {
   "navbar": {
     "title": [
-      "Samarkand",
-      "youth technopark"
+      "Physics-Technical",
+      "Faculty TSU"
     ],
     "home": "Home",
     "activity": "Activity",
     "about": "About Us",
     "news": "News",
-    "residents": "Residents",
+    "residents": "Faculty",
     "contact": "Contact"
   },
   "footer": {
-    "develop": "We invite you to step into the world of innovation with us!",
+    "develop": "Welcome to the Physics-Technical Faculty of Tomsk State University!",
     "sections": "Sections",
-    "location": "University Avenue, Building 15"
+    "location": "Lenin Avenue, 36, Tomsk, 634050"
   },
   "home": {
-    "mtitle": "Homepage - Samarkand Youth Technopark",
-    "title1": "Samarkand",
-    "title": "Welcome to the Youth Technopark!",
-    "subtitle": "Innovative ideas, cutting-edge startups, and the achievements of young scientists converge at the Samarkand Innovation Technopark, ushering in a new era.",
-    "about": "Established under the decrees of the President of the Republic of Uzbekistan and resolutions of the Cabinet of Ministers to support youth innovation projects. The Technopark serves as a modern center implementing regional, scientific, technological, and innovative projects in practice.",
+    "mtitle": "Homepage - Physics-Technical Faculty TSU",
+    "title1": "Tomsk",
+    "title": "Welcome to the Physics-Technical Faculty!",
+    "subtitle": "Advanced scientific research, innovative technologies, and highly qualified specialists unite at the Physics-Technical Faculty of Tomsk State University.",
+    "about": "The Physics-Technical Faculty of TSU is one of the leading centers for training specialists in physics, mathematics, and technical sciences. The faculty conducts active research activities and prepares highly qualified specialists for various sectors of the economy.",
     "ourtask": [
-      "Our Task",
-      "Assisting in the implementation of youth innovation initiatives"
+      "Our Mission",
+      "Training highly qualified specialists in physics and technical sciences"
     ],
     "ourgoal": [
       "Our Goal",
-      "Supporting technological projects of Samarkand region youth"
+      "Development of research activities and innovative technologies"
     ],
     "reason": {
-      "title": "Reasons to Work with Technopark",
-      "subtitle": "Enhancing youth potential through modern technologies and a professional approach",
+      "title": "Advantages of Studying at FTF",
+      "subtitle": "Modern education, advanced research, and promising career opportunities",
       "cards": [
         {
-          "title": "Expert Knowledge",
-          "content": "Individual training and project coordination by mentors with international experience"
+          "title": "Highly Qualified Faculty",
+          "content": "Professors and associate professors with international experience and scientific achievements"
         },
         {
-          "title": "Technological Equipment",
-          "content": "Modern workspaces equipped with 3D printers, VR devices, and artificial intelligence laboratories"
+          "title": "Modern Laboratories",
+          "content": "Well-equipped laboratories for conducting scientific research and practical classes"
         },
         {
-          "title": "Collaboration Network",
-          "content": "Project implementation in partnership with startups, corporations, and international organizations"
+          "title": "Scientific Research",
+          "content": "Participation in international projects and opportunities to engage in scientific activities"
         },
         {
-          "title": "Financial Support",
-          "content": "Project funding through government grants, international sponsors, and investment opportunities"
+          "title": "Career Prospects",
+          "content": "Graduates work in leading companies, research centers, and universities"
         }
       ],
       "statusRank": [
         "Graduate",
-        "Project",
-        "Partner",
-        "Direction"
+        "Student",
+        "Faculty",
+        "Program"
       ]
     }
   },
